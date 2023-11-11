@@ -1,41 +1,6 @@
 
-
-Codes for paper accepted by IJCAI 2023: A Canonicalization-Enhanced Known Fact-Aware Framework For Open Knowledge Graph Link Prediction
-
-# Installation
-python 3.8 + pytorch
-
-1. run `pip install -r requirements.txt`
-2. 安装 torch-geometric和相关依赖包
-总结：在确定环境的版本后，手动下载 .whl 安装包；需要先安装 torch-scatter， torch-sparse，才能安装 torch-geometric
-
-
-- 先看官网安装教程 https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html#installation-via-pip-wheels  
-
-It is recommended to manually download the WHL file for installation
-1. 确定环境的torch版本：
-```
-python -c "import torch; print(torch.__version__)"
-python -c "import torch; print(torch.version.cuda)"
-```
-2. 对应的包对应的网址为：
-`https://data.pyg.org/whl/torch-${TORCH}+${CUDA}.html`,
-先去网站看该torch版本下有哪些版本的包可以安装，如 torch-1.8.1+cu102 的链接是 https://data.pyg.org/whl/torch-1.8.1+cu102.html
-3. 手动下载torch_scatter，torch_sparse，torch_cluster的安装包
-4. 安装下载的 .whl 包
-```
-pip install torch_scatter-2.0.6-cp37-cp37m-linux_x86_64.whl
-pip install torch_sparse-XXXXXXXXXXX
-pip install torch_cluster-XXXXXXXXXX
-```
-5. 最后：
-```
-pip install torch-geometric
-```
-
-
 Codes for the paper accepted by IJCAI 2023: "A Canonicalization-Enhanced Known Fact-Aware Framework For Open Knowledge Graph Link Prediction".
-
+s
 ### Environment Configuration
 
 The project requires Python 3.8 and PyTorch. Please follow the steps below to set up the environment:
@@ -70,6 +35,10 @@ The project requires Python 3.8 and PyTorch. Please follow the steps below to se
         ```
         pip install torch-geometric
         ```
+3. Install pre-trained language models: 
+    - BERT: [bert-base-uncased](https://huggingface.co/bert-base-uncased)
+    - SBERT: [all-mpnet-base-v2](https://huggingface.co/sentence-transformers/all-mpnet-base-v2)
+
 
 ### Running Commands
 Example commands are listed in test-present-sample.sh:
